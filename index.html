@@ -57,16 +57,67 @@ header{background:#f7f8f6ed}
 @media print{body{background:#fff!important;color:#111!important}body>*:not(#cv-print){display:none!important}#cv-print{display:block!important;position:absolute;inset:0;width:100%;padding:25px 35px;color:#111;background:#fff;font:11pt/1.5 Arial,sans-serif}#cv-print h1{font-size:28pt;letter-spacing:0;margin:0 0 8px}#cv-print h2{font-size:16pt;margin:0 0 18px}#cv-print h3{font-size:13pt;margin:18px 0 5px}#cv-print p{margin:5px 0}#cv-print li{margin:3px 0}}
 </style>
 
+
+<style>
+/* Identité premium : bleu nuit, champagne et turquoise */
+:root{--bg:#071321;--panel:#10243a;--panel2:#18334b;--text:#f4f7fb;--muted:#b2c0ce;--mint:#65d7c2;--line:#ffffff24;--blue:#8baecc}
+body{background:radial-gradient(ellipse at 80% 4%,#1a4059 0,transparent 38%),linear-gradient(145deg,#071321,#0b1928 70%,#101f30);color:var(--text)}
+body.dark-theme{background:radial-gradient(ellipse at 80% 4%,#1a4059 0,transparent 38%),linear-gradient(145deg,#071321,#0b1928 70%,#101f30);color:var(--text)}
+body:not(.dark-theme){background:#f4f6f7;color:#17212b}
+body:not(.dark-theme) header{background:#f4f6f7ed}
+body:not(.dark-theme) .card,body:not(.dark-theme) .contact,body:not(.dark-theme) .stats>div,body:not(.dark-theme) .gallery-panel{background:#fff;color:#17212b}
+body:not(.dark-theme) .visual{background:#fff}
+body:not(.dark-theme) .btn{background:#fff;color:#17212b}
+body:not(.dark-theme) .gallery-video,body:not(.dark-theme) .gallery-item{background:#f0f3f4}
+body:not(.dark-theme) .gallery-close{background:#e8edef;color:#17212b}
+body:not(.dark-theme) .image-viewer button{background:#fff;color:#17212b}
+header{background:#071321eF;border-bottom:1px solid #ffffff20;box-shadow:0 8px 28px #0002}
+.logo{letter-spacing:.18em}
+.links a{font-weight:650}
+.links a:hover,.links a.active{background:#65d7c21c;color:var(--mint)}
+.theme-toggle{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:22px;cursor:pointer;font:inherit;font-size:.85rem}
+.hero{gap:42px}
+.hero-engineering{height:440px;position:relative;overflow:hidden;border-radius:28px;border:1px solid #ffffff30;box-shadow:0 28px 70px #0005;background:#132b3d}
+.hero-engineering:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07132105 35%,#071321df 100%),linear-gradient(90deg,#07132130,transparent 65%)}
+.hero-engineering img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.72) contrast(1.05)}
+.hero-image-caption{position:absolute;z-index:1;left:26px;right:26px;bottom:28px;display:flex;flex-direction:column;gap:9px;color:#fff}
+.hero-image-caption span{font-size:.72rem;letter-spacing:.2em;font-weight:850;color:#8ce5d4}
+.hero-image-caption strong{font-size:clamp(1.25rem,2.4vw,1.9rem);line-height:1.2;max-width:440px}
+.hero-image-mark{position:absolute;z-index:1;right:24px;top:18px;font-size:2.2rem;font-weight:950;color:#fff;letter-spacing:-.08em}
+.hero-image-mark span{color:#8ce5d4}
+h1{letter-spacing:-.075em}
+h1 span{color:#8ce5d4}
+.eyebrow,.kicker{color:#8ce5d4}
+.btn{border-radius:12px;transition:transform .2s,background .2s,border-color .2s}
+.btn.primary{background:linear-gradient(120deg,#65d7c2,#b4d8c9);color:#071321;border:0;box-shadow:0 9px 24px #65d7c225}
+.card{background:linear-gradient(145deg,#122a40,#0c1d2d);border-color:#ffffff1c;box-shadow:0 14px 34px #0002;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:#65d7c27a}
+.contact{background:linear-gradient(145deg,#122a40,#0c1d2d)}
+.stats>div{background:linear-gradient(145deg,#142f45,#0c1c2b);border-color:#ffffff20}
+.stats strong{color:#8ce5d4}
+.visual{background:#10263a;border-color:#ffffff26}
+.gallery-panel{background:#10243a;color:var(--text)}
+.gallery-video,.gallery-item{background:#091827}
+.gallery-close{background:#18334b;color:#fff}
+.image-viewer button{background:#10243a;color:white}
+.quicklinks a{color:#8ce5d4}
+footer{border-color:#ffffff20}
+.back-top{background:#132c42;color:#fff;border-color:#ffffff35;box-shadow:0 8px 24px #0004}
+body:not(.dark-theme) .theme-toggle{color:#17212b}
+@media(max-width:780px){.hero-engineering{height:340px}}
+@media(max-width:520px){.hero-engineering{height:290px}.hero-image-caption{left:18px;right:18px;bottom:20px}.theme-toggle{padding:7px 9px}}
+</style>
+
 </head>
 <body>
 <header><nav class="wrap"><a class="logo" href="#accueil">SILVIO<span>.</span></a><div class="links" aria-label="Navigation principale">
-<a href="#accueil" data-link="accueil">Accueil</a><a href="#profil" data-link="profil">Profil</a><a href="#parcours" data-link="parcours">Parcours</a><a href="#competences" data-link="competences">Compétences</a><a href="#projets" data-link="projets">Projets</a><a href="#contact" data-link="contact">Contact</a>
+<a href="#accueil" data-link="accueil">Accueil</a><a href="#profil" data-link="profil">Profil</a><a href="#parcours" data-link="parcours">Parcours</a><a href="#competences" data-link="competences">Compétences</a><a href="#projets" data-link="projets">Projets</a><a href="#contact" data-link="contact">Contact</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le thème clair" title="Changer de thème">☼ <span>Thème</span></button>
 </div></nav></header>
 <main>
 <div class="page active" id="page-accueil">
 <div class="wrap hero"><div><div class="eyebrow">Portfolio professionnel</div><h1>Silvio<br><span>Ntchekep.</span></h1><p class="lead">Ingénierie électromécanique · Technologies numériques · Programmation · Data & intelligence artificielle.</p><p class="muted">Un profil curieux et rigoureux, animé par l’envie de comprendre les systèmes techniques et de créer des solutions utiles grâce au numérique.</p><div class="actions"><a class="btn primary" href="#parcours">Découvrir mon parcours</a><a class="btn" href="#contact">Me contacter</a><button class="btn" id="print-cv" type="button">Exporter mon CV en PDF</button></div></div>
 <div class="visuals">
-<div class="abstract-art" aria-label="Illustration abstraite évoquant la technologie et l’ingénierie"><svg viewBox="0 0 520 360" role="img" aria-label="Composition abstraite de formes géométriques, lignes et points"><defs><linearGradient id="abstractGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#168f82"/><stop offset="1" stop-color="#8bb9b0"/></linearGradient></defs><circle cx="260" cy="175" r="126" fill="none" stroke="url(#abstractGradient)" stroke-width="1.5" opacity=".7"/><circle cx="260" cy="175" r="92" fill="none" stroke="#168f82" stroke-width="1" stroke-dasharray="5 8"/><path d="M65 270 190 90l95 115 80-105 90 170" fill="none" stroke="#168f82" stroke-width="3" stroke-linecap="round"/><path d="M65 95h95l45 55h125l55-55h70M95 315h95l55-60h105l65 60" fill="none" stroke="#557b9b" stroke-width="2" opacity=".8"/><rect x="215" y="130" width="90" height="90" rx="22" fill="url(#abstractGradient)" opacity=".16" stroke="#168f82" stroke-width="2"/><circle cx="260" cy="175" r="22" fill="#168f82"/><circle cx="65" cy="270" r="7" fill="#168f82"/><circle cx="365" cy="100" r="7" fill="#557b9b"/><circle cx="460" cy="270" r="7" fill="#168f82"/><circle cx="95" cy="95" r="5" fill="#557b9b"/><circle cx="410" cy="315" r="5" fill="#557b9b"/></svg><span>Ingénierie · numérique · innovation</span></div>
+<div class="hero-engineering"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400&q=90" alt="Ingénieur travaillant sur un équipement technique en atelier"><div class="hero-image-caption"><span>INGÉNIERIE & INNOVATION</span><strong>De la précision mécanique aux solutions numériques.</strong></div><div class="hero-image-mark">S<span>.</span></div></div>
 <div class="visual" role="button" tabindex="0" data-gallery="numerique" aria-label="Ouvrir la galerie Technologie et numérique"><svg viewBox="0 0 260 170" role="img" aria-label="Illustration de circuits électroniques"><g fill="none" stroke="#65e0c8" stroke-width="3" stroke-linecap="round"><path d="M18 42h55v34h40V42h45v35h65M18 125h45V95h45v30h52V95h63"/><path d="M73 42V18m85 24V18m65 24V18M63 125v24m95-24v24m65-24v24"/></g><g fill="#69a9e8"><circle cx="18" cy="42" r="6"/><circle cx="223" cy="42" r="6"/><circle cx="18" cy="125" r="6"/><circle cx="223" cy="125" r="6"/><rect x="106" y="65" width="30" height="30" rx="5"/></g><g fill="#dff8ff" opacity=".8"><circle cx="73" cy="18" r="4"/><circle cx="158" cy="18" r="4"/><circle cx="223" cy="18" r="4"/></g></svg><div><strong>Technologie & numérique</strong><br><small>Innovation, systèmes et programmation</small></div></div>
 <div class="visual" role="button" tabindex="0" data-gallery="mecanique" aria-label="Ouvrir la galerie Mécanique et ingénierie"><svg viewBox="0 0 260 170" role="img" aria-label="Illustration mécanique avec engrenages"><g fill="none" stroke="#69a9e8" stroke-width="8" stroke-linejoin="round"><circle cx="103" cy="83" r="45"/><circle cx="103" cy="83" r="17"/><path d="M103 20v18m0 90v18M40 83h18m90 0h18M58 38l13 13m64 64 13 13m0-90-13 13M71 115 58 128"/></g><g fill="none" stroke="#65e0c8" stroke-width="7"><circle cx="184" cy="112" r="27"/><circle cx="184" cy="112" r="9"/><path d="M184 75v10m0 54v10m-37-37h10m54 0h10m-63-26 8 8m36 36 8 8m0-52-8 8m-36 36-8 8"/></g></svg><div><strong>Mécanique & ingénierie</strong><br><small>Précision, conception et systèmes</small></div></div>
 </div></div>
@@ -88,7 +139,7 @@ header{background:#f7f8f6ed}
  </div>
 </div>
 <div class="image-viewer" id="image-viewer" role="dialog" aria-modal="true" aria-label="Image agrandie"><button type="button" aria-label="Fermer l’image">×</button><img id="large-image" alt=""></div>
-<button class="back-top" id="back-top" type="button" aria-label="Revenir en haut">↑</button><section id="cv-print" aria-label="CV de Silvio Ntchekep"><h1>Silvio Ntchekep</h1><h2>Profil professionnel</h2><p>Ingénierie électromécanique · Technologies numériques · Programmation · Data & intelligence artificielle</p><h3>Profil</h3><p>Profil curieux et rigoureux, avec un parcours en électromécanique et un développement progressif de compétences en informatique à travers des cours, des exercices et des projets pratiques.</p><h3>Compétences</h3><ul><li>Électromécanique : culture technique, analyse et résolution de problèmes</li><li>Python : variables, conditions, boucles, fonctions et listes</li><li>Linux & Bash : Ubuntu/WSL, terminal, scripts, utilisateurs, groupes et permissions</li><li>Web & serveur : HTML, Nginx et services Linux</li><li>Data & intelligence artificielle : domaines d’intérêt et de développement</li><li>Qualités : curiosité, persévérance, autonomie et apprentissage continu</li></ul><h3>Projets et travaux pratiques</h3><ul><li>Projet personnel de suivi de football — GitHub</li><li>Exercices Python</li><li>Administration Linux sous Ubuntu/WSL, scripts Bash et Nginx</li></ul><h3>Contact</h3><p>Téléphone : 07 46 01 61 94<br>E-mail : silvio.ntchekep@gmail.com<br>GitHub : github.com/silvioboris1800-png</p><p><em>Document de présentation établi à partir des informations actuellement disponibles. Les diplômes, établissements, dates et expériences professionnelles détaillés restent à compléter.</em></p></section><footer><div class="wrap">© <span id="year"></span> Silvio Ntchekep · Portfolio professionnel</div></footer>
+<button class="back-top" id="back-top" type="button" aria-label="Revenir en haut">↑</button><section id="cv-print" aria-label="CV de Silvio Ntchekep"><h1>Silvio Ntchekep</h1><h2>Profil professionnel</h2><p>Ingénierie électromécanique · Technologies numériques · Programmation · Data & intelligence artificielle</p><h3>Profil</h3><p>Profil curieux et rigoureux, avec un parcours en électromécanique et un développement progressif de compétences en informatique à travers des cours, des exercices et des projets pratiques.</p><h3>Compétences</h3><ul><li>Électromécanique : culture technique, analyse et résolution de problèmes</li><li>Python : variables, conditions, boucles, fonctions et listes</li><li>Linux & Bash : Ubuntu/WSL, terminal, scripts, utilisateurs, groupes et permissions</li><li>Web & serveur : HTML, Nginx et services Linux</li><li>Data & intelligence artificielle : domaines d’intérêt et de développement</li><li>Qualités : curiosité, persévérance, autonomie et apprentissage continu</li></ul><h3>Projets et travaux pratiques</h3><ul><li>Projet personnel de suivi de football — GitHub</li><li>Exercices Python</li><li>Administration Linux sous Ubuntu/WSL, scripts Bash et Nginx</li></ul><h3>Contact</h3><p>Téléphone : 07 46 01 61 94<br>E-mail : silvio.ntchekep@gmail.com<br>GitHub : github.com/silvioboris1800-png<br>LinkedIn : linkedin.com/in/silvio-berlusconi-ntchekep-djouraguep-a68a68196</p><p><em>Document de présentation établi à partir des informations actuellement disponibles. Les diplômes, établissements, dates et expériences professionnelles détaillés restent à compléter.</em></p></section><footer><div class="wrap">© <span id="year"></span> Silvio Ntchekep · Portfolio professionnel</div></footer>
 <script>
 const validPages=['accueil','profil','parcours','competences','projets','contact'];
 const galleryData={
@@ -140,6 +191,6 @@ document.querySelector('#image-viewer button').addEventListener('click',closeIma
 document.getElementById('image-viewer').addEventListener('click',e=>{if(e.target.id==='image-viewer')closeImage();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeImage();closeGallery();}});
 function showPage(){let page=location.hash.replace('#','')||'accueil';if(!validPages.includes(page))page='accueil';document.querySelectorAll('.page').forEach(el=>el.classList.toggle('active',el.id==='page-'+page));document.querySelectorAll('[data-link]').forEach(el=>el.classList.toggle('active',el.dataset.link===page));window.scrollTo({top:0,behavior:'instant'});document.title=(page==='accueil'?'Accueil':page.charAt(0).toUpperCase()+page.slice(1))+' — Silvio Ntchekep';}
-window.addEventListener('hashchange',showPage);document.getElementById('year').textContent=new Date().getFullYear();showPage();document.getElementById('print-cv').addEventListener('click',()=>window.print());document.getElementById('back-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}),{threshold:.12});document.querySelectorAll('.card,.section-head,.stats>div').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el);});
+document.body.classList.add('dark-theme');const themeButton=document.getElementById('theme-toggle');themeButton.addEventListener('click',()=>{const dark=document.body.classList.toggle('dark-theme');themeButton.innerHTML=dark?'☼ <span>Thème clair</span>':'◐ <span>Thème sombre</span>';themeButton.setAttribute('aria-label',dark?'Activer le thème clair':'Activer le thème sombre');});window.addEventListener('hashchange',showPage);document.getElementById('year').textContent=new Date().getFullYear();showPage();document.getElementById('print-cv').addEventListener('click',()=>window.print());document.getElementById('back-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}),{threshold:.12});document.querySelectorAll('.card,.section-head,.stats>div').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el);});
 </script>
 </body></html>
