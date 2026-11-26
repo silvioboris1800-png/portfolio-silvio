@@ -168,6 +168,40 @@ body:not(.dark-theme) #page-accueil .actions .btn.primary{
 @media(max-width:600px){#page-accueil .actions .btn{width:100%}}
 </style>
 
+
+<style>
+/* Correctif très contrasté : boutons accueil */
+#page-accueil .actions .btn,
+#page-accueil .actions a.btn,
+#page-accueil .actions button.btn{
+ background:#f5c451!important;
+ background-image:none!important;
+ color:#102638!important;
+ -webkit-text-fill-color:#102638!important;
+ border:2px solid #f5c451!important;
+ opacity:1!important;
+ text-shadow:none!important;
+ box-shadow:0 5px 0 #9b7424,0 10px 22px #0004!important;
+ font-size:1rem!important;
+ font-weight:900!important;
+}
+#page-accueil .actions .btn.primary{
+ background:#00d6b4!important;
+ background-image:none!important;
+ color:#062b2b!important;
+ -webkit-text-fill-color:#062b2b!important;
+ border:2px solid #00d6b4!important;
+ box-shadow:0 5px 0 #087e78,0 10px 22px #0004!important;
+}
+#page-accueil .actions .btn:hover,
+#page-accueil .actions .btn:focus-visible{
+ filter:brightness(1.04)!important;
+ transform:translateY(-2px)!important;
+ outline:3px solid #fff!important;
+ outline-offset:3px!important;
+}
+</style>
+
 </head>
 <body>
 <header><nav class="wrap"><a class="logo" href="#accueil">SILVIO<span>.</span></a><div class="links" aria-label="Navigation principale">
