@@ -139,6 +139,35 @@ body:not(.dark-theme) .hero-image-caption span{color:#9df0df}
 @media(prefers-reduced-motion:no-preference){body:not(.dark-theme) .card:hover{box-shadow:0 18px 38px #1d40501c}}
 </style>
 
+
+<style>
+/* Contraste renforcé des trois boutons de l'accueil */
+#page-accueil .actions .btn{
+ display:inline-flex!important;align-items:center;justify-content:center;
+ min-height:48px;padding:13px 21px;border-radius:13px;
+ background:#173b52!important;color:#fff!important;
+ border:1px solid #477187!important;
+ box-shadow:0 7px 18px #07132126;
+ font-weight:800;text-decoration:none!important;
+}
+#page-accueil .actions .btn.primary{
+ background:linear-gradient(120deg,#087e78,#26a895)!important;
+ color:#fff!important;border-color:#087e78!important;
+ box-shadow:0 9px 22px #087e7840;
+}
+#page-accueil .actions .btn:hover{
+ filter:brightness(1.12);transform:translateY(-3px);
+ box-shadow:0 12px 24px #07132130;
+}
+body:not(.dark-theme) #page-accueil .actions .btn:not(.primary){
+ background:#d1e1e8!important;color:#173447!important;border-color:#9bb8c5!important;
+}
+body:not(.dark-theme) #page-accueil .actions .btn.primary{
+ background:linear-gradient(120deg,#087e78,#26a895)!important;color:#fff!important;
+}
+@media(max-width:600px){#page-accueil .actions .btn{width:100%}}
+</style>
+
 </head>
 <body>
 <header><nav class="wrap"><a class="logo" href="#accueil">SILVIO<span>.</span></a><div class="links" aria-label="Navigation principale">
