@@ -17,7 +17,8 @@ h1{font-size:clamp(3.4rem,8vw,6rem);line-height:.98;letter-spacing:-.065em;margi
 .visuals{display:grid;grid-template-columns:1fr 1fr;gap:14px}.visual{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#173750,#0b1a2a);min-height:210px;display:flex;flex-direction:column;justify-content:space-between;padding:18px;box-shadow:0 18px 50px #0003}.visual:first-child{transform:translateY(22px)}.visual svg{width:100%;height:150px}.visual strong{font-size:.94rem}.visual small{color:var(--muted)}
 section.content{padding:78px 0 95px}.section-head{max-width:720px;margin-bottom:34px}h2{font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.1;letter-spacing:-.045em;margin:9px 0 20px}.muted{color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,var(--panel),#0d1b2c)}.card h3{margin:0 0 10px}.card p{color:var(--muted);margin:0}.card a{display:inline-block;margin-top:14px;color:var(--mint)}.icon{font-size:1.55rem;margin-bottom:8px}.contact{padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}.contact a{color:var(--mint);overflow-wrap:anywhere}.home-bottom{padding:8px 0 60px}.home-bottom h2{font-size:1.7rem}.quicklinks{display:flex;gap:10px;flex-wrap:wrap}.quicklinks a{color:var(--mint);border:1px solid var(--line);border-radius:24px;padding:9px 14px;text-decoration:none}
 footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.9rem}
-@media(max-width:780px){nav{align-items:flex-start;flex-direction:column;padding:14px 0}.links{gap:3px}.links a{padding:8px 10px}.hero{grid-template-columns:1fr;padding:65px 0;gap:38px;min-height:auto}.visuals{max-width:580px}.cards{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr;gap:18px}}
+.visual{cursor:pointer;transition:transform .22s,border-color .22s}.visual:hover{transform:translateY(-5px);border-color:var(--mint)}.visual:focus-visible{outline:3px solid var(--mint);outline-offset:4px}.gallery-overlay{position:fixed;inset:0;z-index:20;background:#020914ed;display:none;overflow-y:auto;padding:28px 16px}.gallery-overlay.open{display:block}.gallery-panel{width:min(1050px,100%);margin:25px auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px}.gallery-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:8px}.gallery-top h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:5px 0}.gallery-close{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:50%;width:42px;height:42px;font-size:1.5rem;cursor:pointer}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.gallery-item{margin:0;overflow:hidden;border-radius:15px;border:1px solid var(--line);background:#091827}.gallery-item img{display:block;width:100%;height:190px;object-fit:cover;transition:transform .3s}.gallery-item:hover img{transform:scale(1.04)}.gallery-item figcaption{padding:11px 13px;color:var(--muted);font-size:.9rem}.gallery-note{color:var(--muted);font-size:.9rem;margin-top:18px}@media(max-width:780px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.gallery-grid{grid-template-columns:1fr}.gallery-item img{height:210px}.gallery-panel{padding:16px}.gallery-overlay{padding:10px}
+}@media(max-width:780px){nav{align-items:flex-start;flex-direction:column;padding:14px 0}.links{gap:3px}.links a{padding:8px 10px}.hero{grid-template-columns:1fr;padding:65px 0;gap:38px;min-height:auto}.visuals{max-width:580px}.cards{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.wrap{width:min(100% - 28px,1100px)}.cards{grid-template-columns:1fr}.visual{min-height:170px;padding:13px}.visual svg{height:115px}.links{width:100%}.links a{font-size:.82rem}}
 </style>
 </head>
@@ -29,8 +30,8 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 <div class="page active" id="page-accueil">
 <div class="wrap hero"><div><div class="eyebrow">Portfolio professionnel</div><h1>Silvio<br><span>Ntchekep.</span></h1><p class="lead">Ingénierie électromécanique · Technologies numériques · Programmation · Data & intelligence artificielle.</p><p class="muted">Un profil curieux et rigoureux, animé par l’envie de comprendre les systèmes techniques et de créer des solutions utiles grâce au numérique.</p><div class="actions"><a class="btn primary" href="#parcours">Découvrir mon parcours</a><a class="btn" href="#contact">Me contacter</a></div></div>
 <div class="visuals">
-<div class="visual"><svg viewBox="0 0 260 170" role="img" aria-label="Illustration de circuits électroniques"><g fill="none" stroke="#65e0c8" stroke-width="3" stroke-linecap="round"><path d="M18 42h55v34h40V42h45v35h65M18 125h45V95h45v30h52V95h63"/><path d="M73 42V18m85 24V18m65 24V18M63 125v24m95-24v24m65-24v24"/></g><g fill="#69a9e8"><circle cx="18" cy="42" r="6"/><circle cx="223" cy="42" r="6"/><circle cx="18" cy="125" r="6"/><circle cx="223" cy="125" r="6"/><rect x="106" y="65" width="30" height="30" rx="5"/></g><g fill="#dff8ff" opacity=".8"><circle cx="73" cy="18" r="4"/><circle cx="158" cy="18" r="4"/><circle cx="223" cy="18" r="4"/></g></svg><div><strong>Technologie & numérique</strong><br><small>Innovation, systèmes et programmation</small></div></div>
-<div class="visual"><svg viewBox="0 0 260 170" role="img" aria-label="Illustration mécanique avec engrenages"><g fill="none" stroke="#69a9e8" stroke-width="8" stroke-linejoin="round"><circle cx="103" cy="83" r="45"/><circle cx="103" cy="83" r="17"/><path d="M103 20v18m0 90v18M40 83h18m90 0h18M58 38l13 13m64 64 13 13m0-90-13 13M71 115 58 128"/></g><g fill="none" stroke="#65e0c8" stroke-width="7"><circle cx="184" cy="112" r="27"/><circle cx="184" cy="112" r="9"/><path d="M184 75v10m0 54v10m-37-37h10m54 0h10m-63-26 8 8m36 36 8 8m0-52-8 8m-36 36-8 8"/></g></svg><div><strong>Mécanique & ingénierie</strong><br><small>Précision, conception et systèmes</small></div></div>
+<div class="visual" role="button" tabindex="0" data-gallery="numerique" aria-label="Ouvrir la galerie Technologie et numérique"><svg viewBox="0 0 260 170" role="img" aria-label="Illustration de circuits électroniques"><g fill="none" stroke="#65e0c8" stroke-width="3" stroke-linecap="round"><path d="M18 42h55v34h40V42h45v35h65M18 125h45V95h45v30h52V95h63"/><path d="M73 42V18m85 24V18m65 24V18M63 125v24m95-24v24m65-24v24"/></g><g fill="#69a9e8"><circle cx="18" cy="42" r="6"/><circle cx="223" cy="42" r="6"/><circle cx="18" cy="125" r="6"/><circle cx="223" cy="125" r="6"/><rect x="106" y="65" width="30" height="30" rx="5"/></g><g fill="#dff8ff" opacity=".8"><circle cx="73" cy="18" r="4"/><circle cx="158" cy="18" r="4"/><circle cx="223" cy="18" r="4"/></g></svg><div><strong>Technologie & numérique</strong><br><small>Innovation, systèmes et programmation</small></div></div>
+<div class="visual" role="button" tabindex="0" data-gallery="mecanique" aria-label="Ouvrir la galerie Mécanique et ingénierie"><svg viewBox="0 0 260 170" role="img" aria-label="Illustration mécanique avec engrenages"><g fill="none" stroke="#69a9e8" stroke-width="8" stroke-linejoin="round"><circle cx="103" cy="83" r="45"/><circle cx="103" cy="83" r="17"/><path d="M103 20v18m0 90v18M40 83h18m90 0h18M58 38l13 13m64 64 13 13m0-90-13 13M71 115 58 128"/></g><g fill="none" stroke="#65e0c8" stroke-width="7"><circle cx="184" cy="112" r="27"/><circle cx="184" cy="112" r="9"/><path d="M184 75v10m0 54v10m-37-37h10m54 0h10m-63-26 8 8m36 36 8 8m0-52-8 8m-36 36-8 8"/></g></svg><div><strong>Mécanique & ingénierie</strong><br><small>Précision, conception et systèmes</small></div></div>
 </div></div>
 <div class="wrap home-bottom"><h2>Explorer mon univers</h2><div class="quicklinks"><a href="#profil">À propos de moi ↗</a><a href="#parcours">Mon parcours ↗</a><a href="#competences">Mes compétences ↗</a><a href="#projets">Mes projets ↗</a></div></div>
 </div>
@@ -39,9 +40,59 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 <section class="page content" id="page-competences"><div class="wrap"><div class="section-head"><div class="kicker">Savoir-faire</div><h2>Compétences & outils</h2></div><div class="cards"><article class="card"><div class="icon">⚙️</div><h3>Électromécanique</h3><p>Culture technique, rigueur, analyse et résolution de problèmes.</p></article><article class="card"><div class="icon">🐍</div><h3>Python</h3><p>Bases de programmation : variables, conditions, boucles, fonctions et listes.</p></article><article class="card"><div class="icon">🐧</div><h3>Linux & Bash</h3><p>Ubuntu sous WSL, commandes terminal, scripts, utilisateurs, groupes et permissions.</p></article><article class="card"><div class="icon">🌐</div><h3>Web & serveur</h3><p>Premiers travaux pratiques avec HTML, serveur Nginx et services Linux.</p></article><article class="card"><div class="icon">📊</div><h3>Data & IA</h3><p>Domaine d’intérêt et de développement de compétences.</p></article><article class="card"><div class="icon">🤝</div><h3>Qualités</h3><p>Curiosité, persévérance, autonomie et apprentissage continu.</p></article></div></div></section>
 <section class="page content" id="page-projets"><div class="wrap"><div class="section-head"><div class="kicker">Mise en pratique</div><h2>Projets & travaux pratiques</h2></div><div class="cards"><article class="card"><div class="icon">⚽</div><h3>Suivi de football</h3><p>Projet personnel autour du football, disponible sur GitHub. À enrichir progressivement avec les fonctionnalités et technologies effectivement réalisées.</p><a href="https://github.com/silvioboris1800-png/suivi-de-football" target="_blank" rel="noopener">Voir le dépôt GitHub ↗</a></article><article class="card"><div class="icon">🐍</div><h3>Exercices Python</h3><p>Travaux pratiques sur les listes, fonctions, boucles, conditions, calculs et petits programmes interactifs.</p></article><article class="card"><div class="icon">🖥️</div><h3>Administration Linux</h3><p>Atelier Ubuntu/WSL : scripts Bash, gestion des permissions et groupes, services systemd et installation de Nginx.</p></article></div></div></section>
 <section class="page content" id="page-contact"><div class="wrap two"><div class="section-head"><div class="kicker">Contact</div><h2>Échangeons sur vos projets.</h2><p class="muted">Disponible pour discuter de projets, d’opportunités et de collaborations.</p></div><div class="contact"><p><strong>Téléphone</strong><br><a href="tel:+33746016194">07 46 01 61 94</a></p><p><strong>E-mail</strong><br><a href="mailto:silvio.ntchekep@gmail.com">silvio.ntchekep@gmail.com</a></p><p><strong>GitHub</strong><br><a href="https://github.com/silvioboris1800-png" target="_blank" rel="noopener">github.com/silvioboris1800-png ↗</a></p></div></div></section>
-</main><footer><div class="wrap">© <span id="year"></span> Silvio Ntchekep · Portfolio professionnel</div></footer>
+</main>
+<div class="gallery-overlay" id="gallery" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+ <div class="gallery-panel">
+  <div class="gallery-top"><div><div class="kicker">Galerie visuelle</div><h2 id="gallery-title">Découvrir</h2></div><button class="gallery-close" type="button" aria-label="Fermer la galerie">×</button></div>
+  <p class="muted" id="gallery-description">Images autour de ce domaine.</p>
+  <div class="gallery-grid" id="gallery-grid"></div>
+  <p class="gallery-note">Les images s’ouvrent depuis les cartes de la page d’accueil. Une galerie vidéo courte et muette pourra être ajoutée dans cette fenêtre.</p>
+ </div>
+</div>
+<footer><div class="wrap">© <span id="year"></span> Silvio Ntchekep · Portfolio professionnel</div></footer>
 <script>
 const validPages=['accueil','profil','parcours','competences','projets','contact'];
+const galleryData={
+ mecanique:{title:'Mécanique & ingénierie',description:'Quelques univers de la mécanique, des machines et de la conception technique.',items:[
+  ['Moteur et mécanique automobile','photo-1486262715619-67b85e0b08d3'],
+  ['Engrenages et transmission','photo-1581092160562-40aa08e78837'],
+  ['Atelier et maintenance industrielle','photo-1581092580497-e0d23cbdf1dc'],
+  ['Conception mécanique','photo-1581092334651-ddf26d9a09d0'],
+  ['Robotique et automatisation','photo-1581091226825-a6a2a5aee158'],
+  ['Machines et équipements techniques','photo-1581092795360-fd1ca04f0952']
+ ]},
+ numerique:{title:'Technologie & numérique',description:'Un aperçu des circuits, de l’informatique, de la robotique et des innovations numériques.',items:[
+  ['Circuits électroniques','photo-1518770660439-4636190af475'],
+  ['Informatique et programmation','photo-1515879218367-8466d910aaa4'],
+  ['Réseaux et composants numériques','photo-1558494949-ef010cbdcc31'],
+  ['Intelligence artificielle et données','photo-1677442136019-21780ecad995'],
+  ['Robotique et systèmes intelligents','photo-1485827404703-89b55fcc595e'],
+  ['Technologies et innovation','photo-1519389950473-47ba0277781c']
+ ]}
+};
+function openGallery(key){
+ const data=galleryData[key];if(!data)return;
+ document.getElementById('gallery-title').textContent=data.title;
+ document.getElementById('gallery-description').textContent=data.description;
+ const grid=document.getElementById('gallery-grid');grid.replaceChildren();
+ data.items.forEach(([caption,id])=>{
+  const figure=document.createElement('figure');figure.className='gallery-item';
+  const img=document.createElement('img');img.loading='lazy';img.alt=caption;
+  img.src='https://images.unsplash.com/'+id+'?auto=format&fit=crop&w=900&q=80';
+  const figcaption=document.createElement('figcaption');figcaption.textContent=caption;
+  figure.append(img,figcaption);grid.append(figure);
+ });
+ document.getElementById('gallery').classList.add('open');document.body.style.overflow='hidden';
+ document.querySelector('.gallery-close').focus();
+}
+function closeGallery(){document.getElementById('gallery').classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('[data-gallery]').forEach(el=>{
+ el.addEventListener('click',()=>openGallery(el.dataset.gallery));
+ el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGallery(el.dataset.gallery);}});
+});
+document.querySelector('.gallery-close').addEventListener('click',closeGallery);
+document.getElementById('gallery').addEventListener('click',e=>{if(e.target.id==='gallery')closeGallery();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGallery();});
 function showPage(){let page=location.hash.replace('#','')||'accueil';if(!validPages.includes(page))page='accueil';document.querySelectorAll('.page').forEach(el=>el.classList.toggle('active',el.id==='page-'+page));document.querySelectorAll('[data-link]').forEach(el=>el.classList.toggle('active',el.dataset.link===page));window.scrollTo({top:0,behavior:'instant'});document.title=(page==='accueil'?'Accueil':page.charAt(0).toUpperCase()+page.slice(1))+' — Silvio Ntchekep';}
 window.addEventListener('hashchange',showPage);document.getElementById('year').textContent=new Date().getFullYear();showPage();
 </script>
